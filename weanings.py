@@ -1,13 +1,5 @@
-class GrowerHerd(object):
-    def __init__(self):
-        self._weaning_groups = []
-
-    def add_weaning_group(self, group):
-        self._weaning_groups.append(group)
-
-
 class WeaningGroup(object):
-    def __init__(self, num_litters, num_weaners, actual_weaning_date):
+    def __init__(self, num_litters, num_weaners):
         self._num_litters = num_litters
         self._num_weaners = num_weaners
 
@@ -22,4 +14,3 @@ class WeaningGroup(object):
     @property
     def num_weaners(self):
         return self._num_weaners
-
