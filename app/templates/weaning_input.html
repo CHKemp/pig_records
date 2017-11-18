@@ -1,0 +1,22 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>add wean grp</h1>
+<form action="" method="post" name="login">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.n_weaned(size=80) }}
+        {% for error in form.n_weaned.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        {{ form.n_litters(size=80) }}
+        {% for error in form.n_litters.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" value="Add Weaning Group"></p>
+</form>
+{% endblock %}
